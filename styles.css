@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    cursor: url('./IMG/cursor.png'), auto;
+    cursor: url("./IMG/cursor.png"), auto;
     background-image: url(./IMG/Wallpaper.png);
     background-size: cover;
     background-position: center;
