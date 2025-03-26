@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="title">Command Prompt</div>
+            <div class="controls">
+                <button class="minimize">─</button>
+                <button class="maximize">□</button>
+                <a href="../index.html"><button class="close">×</button></a>
+            </div>
+        </div>
+        <div class="terminal-content">
+            <p class="command-line">
+                <span class="prompt">C:\Users\Umbralis></span> 
+                <span class="command">week2.exe</span>
+            </p>
+            <div class="terminal-text">
+                <p>Loading Week 2 content...</p>
+                <p>Content: Web design and Interface exploration...</p>
+                <p>Initializing content...</p>
+                <p>struct group_info init_groups = { .usage = ATOMIC_INIT(2) };
+                    struct group_info *groups_alloc(int gidsetsize)
+                        struct group_info *group_info;
+                        int nblocks;
+                        int i;
+                        nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK
+                        /* Make sure we always allocate at least one indirect block pointer */
+                        nblocks = nblocks ? : 1;
+                        group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER);
+                    </p>
+                <p>Content loaded successfully! Please select one:</p>
+                <div class="terminal-links">
+                    <a href="./INSIDE/crazy8/index.html" class="terminal-link">Crazy 8's</a>
+                    <a href="./INSIDE/csspractise/index.html" class="terminal-link">CSS Practise</a>
+                    <a href="./INSIDE/inspiration/index.html" class="terminal-link">Inspiration</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="shooting-stars" class="hidden">
+        <div class="stars1" id="star1"><pre>*-.</pre></div>
+        <div class="stars1" id="star2"><pre>*-.</pre></div>
+        <div class="stars1" id="star3"><pre>*-.</pre></div>
+        <div class="stars1" id="star4"><pre>*-.</pre></div>
+        <div class="stars1" id="star5"><pre>*-.</pre></div>
+        <div class="stars1" id="star6"><pre>*-.</pre></div>
+        <div class="stars1" id="star7"><pre>*-.</pre></div>
+    </div>
+    
+    <!-- Navigation buttons -->
+    <a href="../Week_1/index.html">
+        <img src="../IMG/2week1.png" alt="Go to Week 1" class="week1-nav">
+    </a>
+    
+    <a href="../Week_3/index.html">
+        <img src="../IMG/2week3.png" alt="Go to Week 3" class="week3-nav">
+    </a>
+    
+    <a href="../index.html">
+        <img src="../IMG/2home.png" alt="Return to Homepage" class="home-nav">
+    </a>
+</body>
+</html>

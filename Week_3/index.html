@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 - Responsive Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="windows-container">
+        <div class="window-controls-fixed">
+            <button onclick="toggleWindow('window1')" class="window-button">Window1</button>
+            <button onclick="toggleWindow('window2')" class="window-button">Window2</button>
+            <button onclick="toggleWindow('window3')" class="window-button">Window3</button>
+            <button onclick="toggleWindow('window4')" class="window-button">Window4</button>
+            <button onclick="toggleWindow('window5')" class="window-button">Window5</button>
+        </div>
+
+        <div class="window" id="window1">
+            <div class="window-titlebar">
+                <h1>Media Queries</h1>
+                <div class="window-controls">
+                    <button class="minimize" onclick="toggleWindow('window1')">─</button>
+                    <button class="maximize">□</button>
+                    <button class="close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <img src="../IMG/mediaqueries.png" alt="Media Queries Diagram" class="content-image">
+                <p>Media queries are used to allow websites to adapt their layout based on screen size:</p>
+                <ul>
+                    <li>Mobile (≤ 768px): Windows stack vertically by using auto for sizing, full width of images for better readability and preventing overflow</li>
+                    <li>Tablet (769px - 1024px): Adjusted window positions, optimized for medium screens</li>
+                    <li>Desktop (≥ 1025px): Full overlapping windows layout with original positioning</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="window" id="window2">
+            <div class="window-titlebar">
+                <h1>Responsive Design</h1>
+                <div class="window-controls">
+                    <button class="minimize" onclick="toggleWindow('window2')">─</button>
+                    <button class="maximize">□</button>
+                    <button class="close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <img src="../IMG/responsivedesign.png" alt="Responsive Design Example" class="content-image">
+                <p>Responsive web design, or RWD, is a design approach that addresses the range of devices and device sizes, enabling automatic adaption to the screen, whether the content is viewed on a tablet, phone, television, or watch. (wikipedia)</p>
+                <p>A good Ui/Ux-er has to be able to adapt their websites or apps for the different mediums they can be accessed.</p>
+            </div>
+        </div>
+
+        <div class="window" id="window3">
+            <div class="window-titlebar">
+                <h1>Hunt N Gather GALLERY WebDesignMuseum</h1>
+                <div class="window-controls">
+                    <button class="minimize" onclick="toggleWindow('window3')">─</button>
+                    <button class="maximize">□</button>
+                    <button class="close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <img src="../IMG/3huntngather1.png" alt="webdesignmuseum" class="content-image">
+                <p>The WebDesignMuseum website is how I imagine a good archive. It has all the different galleries sorted and also a filter option for ease of usage. This is ideal for us users so we can easily pinpoint what we’re looking for. The navigation is simple, but effective. </p>
+            </div>
+        </div>
+
+        <div class="window" id="window4">
+            <div class="window-titlebar">
+                <h1>Hunt N Gather GALLERY WeFeelFine</h1>
+                <div class="window-controls">
+                    <button class="minimize" onclick="toggleWindow('window4')">─</button>
+                    <button class="maximize">□</button>
+                    <button class="close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <img src="../IMG/3huntngather2.png" alt="wefeelfine" class="content-image">
+                <p>The WeFeelFine website is an interesting way to create a gallery/archive of images. It takes a more web 1.0 approach, making simple usage of css and html. It provides all the images immediately without the need for infinite scrolling or accessing different pages. </p>
+            </div>
+        </div>
+
+        <div class="window" id="window5">
+            <div class="window-titlebar">
+                <h1>Hunt N Gather CatBounce</h1>
+                <div class="window-controls">
+                    <button class="minimize" onclick="toggleWindow('window5')">─</button>
+                    <button class="maximize">□</button>
+                    <button class="close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <img src="../IMG/3huntngather3.png" alt="catbounce" class="content-image">
+                <p>CatBounce is not necessarily an archive, but I guess it does provide cat images, so it kind of counts if we bend the rules a bit. This website in particular interests me simply due to the way the cats are able to bounce and the user is able to interact with the PNGs by grabbing and tossing them around.</p>
+            </div>
+        </div>
+
+        <video muted autoplay loop id="bg-video">
+            <source src="../IMG/background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <a href="../index.html">
+        <img src="../IMG/3home.png" alt="Return to Homepage" class="home-nav">
+    </a>
+    
+    <a href="../Week_1/index.html">
+        <img src="../IMG/3week1.png" alt="Go to Week 1" class="week1-nav">
+    </a>
+    
+    <a href="../Week_2/index.html">
+        <img src="../IMG/3week2.png" alt="Go to Week 2" class="week2-nav">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
