@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Week 4</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="background-iframe-container">
+    <iframe src="https://yubelyubel7.github.io/kusumadots/" class="background-iframe"></iframe>
+  </div>
+  
+  <div class="window">
+    <div class="title-bar">
+      <span class="title">Week 4</span>
+      <div class="controls">
+        <button class="minimize">_</button>
+        <button class="maximize">□</button>
+        <button class="close">×</button>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <button class="nav-button"><img src="../IMG/back.png" alt="Back" class="toolbar-icon"></button>
+      <button class="nav-button"><img src="../IMG/forward.png" alt="Forward" class="toolbar-icon"></button>
+      <button class="nav-button"><img src="../IMG/up.png" alt="Up" class="toolbar-icon"></button>
+      <div class="toolbar-separator"></div>
+      <button class="search-button"><img src="../IMG/search.png" alt="Search" class="toolbar-icon">Search</button>
+      <button class="folders-button">Folders</button>
+      <div class="address-bar">
+        <span class="address-label">Address</span>
+        <input type="text" value="Yayoi Kusama Gallery" class="address-input" />
+      </div>
+      <button class="go-button">Go</button>
+    </div>
+
+    <div class="main-content">
+      <div class="sidebar">
+        <h3>Week 4 Activities</h3>
+        <div class="details">
+          <strong>National Gallery Victoria</strong><br/>
+          Visit to Yayoi Kusama exhibit<br/>
+          <br/>
+          Location: NGV<br/>
+          Date: Week 4
+          <br/><br/>
+          Right after our weeks 1-3 workbook submission, we went to the Yayoi Kusuma exhibition in the National Gallery of Victoria.
+          <br/><br/>
+          Here, we were given free reign to take inspiration for Kusuma's odd yet intriguing artworks. Her works make great use of repeating patterns, especially with her iconic polka dot works.
+          <br/><br/>
+          As week 4 and onwards was going to thrust us into the world of p5.js, Kusuma's works gave us great inspiration for our beginner p5.js works as we try to recreate her works through an algorithmic process. 
+        </div>
+        
+        <div class="sidebar-links">
+          <h3>Resources</h3>
+          <a href="p5/index.html" class="sidebar-link">P5 practice 1</a>
+          <a href="2p5/index.html" class="sidebar-link">P5 practice 2</a>
+          <a href="3p5/index.html" class="sidebar-link">P5 self portrait</a>
+        </div>
+      </div>
+
+      <div class="viewer">
+        <img src="../IMG/kgallery1.jpg" alt="Kusama Gallery 1" id="main-image" class="main-image" />
+        <div class="thumbnails-container">
+          <div class="thumbnails">
+            <img src="../IMG/kgallery1.jpg" alt="Kusama Gallery 1" class="thumbnail active" onclick="changeImage('../IMG/kgallery1.jpg', this)" />
+            <img src="../IMG/kgallery2.jpg" alt="Kusama Gallery 2" class="thumbnail" onclick="changeImage('../IMG/kgallery2.jpg', this)" />
+            <img src="../IMG/kgallery3.jpg" alt="Kusama Gallery 3" class="thumbnail" onclick="changeImage('../IMG/kgallery3.jpg', this)" />
+            <img src="../IMG/kgallery4.jpg" alt="Kusama Gallery 4" class="thumbnail" onclick="changeImage('../IMG/kgallery4.jpg', this)" />
+            <img src="../IMG/kgallery5.jpg" alt="Kusama Gallery 5" class="thumbnail" onclick="changeImage('../IMG/kgallery5.jpg', this)" />
+            <img src="../IMG/kgallery6.jpg" alt="Kusama Gallery 6" class="thumbnail" onclick="changeImage('../IMG/kgallery6.jpg', this)" />
+            <img src="../IMG/kgallery7.jpg" alt="Kusama Gallery 7" class="thumbnail" onclick="changeImage('../IMG/kgallery7.jpg', this)" />
+            <img src="../IMG/kgallery8.jpg" alt="Kusama Gallery 8" class="thumbnail" onclick="changeImage('../IMG/kgallery8.jpg', this)" />
+            <img src="../IMG/kgallery9.jpg" alt="Kusama Gallery 9" class="thumbnail" onclick="changeImage('../IMG/kgallery9.jpg', this)" />
+            <img src="../IMG/kgallery10.jpg" alt="Kusama Gallery 10" class="thumbnail" onclick="changeImage('../IMG/kgallery10.jpg', this)" />
+            <img src="../IMG/kgallery11.jpg" alt="Kusama Gallery 11" class="thumbnail" onclick="changeImage('../IMG/kgallery11.jpg', this)" />
+            <img src="../IMG/kgallery12.jpg" alt="Kusama Gallery 12" class="thumbnail" onclick="changeImage('../IMG/kgallery12.jpg', this)" />
+            <img src="../IMG/kgallery13.jpg" alt="Kusama Gallery 13" class="thumbnail" onclick="changeImage('../IMG/kgallery13.jpg', this)" />
+            <img src="../IMG/kgallery14.jpg" alt="Kusama Gallery 14" class="thumbnail" onclick="changeImage('../IMG/kgallery14.jpg', this)" />
+            <img src="../IMG/kgallery15.jpg" alt="Kusama Gallery 15" class="thumbnail" onclick="changeImage('../IMG/kgallery15.jpg', this)" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <a href="../index.html">
+    <img src="../IMG/home.png" alt="Return to Homepage" class="home-nav">
+  </a>
+  
+  <a href="../index.html">
+    <img src="../IMG/4home.gif" alt="Return to Homepage" class="home-nav">
+  </a>
+  
+  <a href="../Week_5/index.html">
+    <img src="../IMG/4week5.gif" alt="Go to Week 5" class="week5-nav">
+  </a>
+  
+  <a href="../Week_6/index.html">
+    <img src="../IMG/4week6.gif" alt="Go to Week 6" class="week6-nav">
+  </a>
+
+
+</body>
+</html>
