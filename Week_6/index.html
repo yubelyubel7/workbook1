@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube - Broadcast Yourself.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <div id="logo-container">
+            <img src="../IMG/umbralistube.png" alt="UmbralisTube" id="logo">
+            <span id="tagline">Broadcast Yourself or something<span class="tm">™</span></span>
+        </div>
+        <div id="header-right">
+            <div id="search-container">
+                <input type="text" id="search-box" placeholder="Search Videos">
+                <button id="search-button">Search</button>
+            </div>
+            <div id="user-links">
+                <a href="#">Videos</a>
+                <a href="#">Channels</a>
+                <a href="#">Community</a>
+                <a href="#" id="upload">Upload</a>
+                <a href="#" class="sign-in">Sign In</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="content">
+        <div id="main-col">
+            <div id="video-player">
+                <div id="player-container">
+                    <iframe 
+                        src="https://yubelyubel7.github.io/p5song/" 
+                        id="featured-video"
+                        allowfullscreen
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                    ></iframe>
+                </div>
+            </div>
+            
+            <div id="video-info">
+                <h1>WEEK 6 - Try not to die challenge</h1>
+                <div id="rating">
+                    <div id="stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span>(5.0)</span>
+                    </div>
+                    <div id="views">24,342 views</div>
+                </div>
+                <div id="video-actions">
+                    <button class="action-btn">Share</button>
+                    <button class="action-btn">Favorite</button>
+                    <button class="action-btn">Add to Playlist</button>
+                    <button class="action-btn">Flag</button>
+                </div>
+                <div id="uploader">
+                    <span>From:</span> <a href="#">JurgenWinata</a>
+                    <span class="date">March 31, 2025</span>
+                </div>
+                <div id="description">
+                    For week 6 we continued diving deeper into the world of p5.js and its capabilities. This week specifically though, we learnt more on the idea of data visualisation. How can we recreate boring old data into something more visual and appealing to the eye? We actually did a workshop activity revolving this, but that will be covered in another video!
+                    <br><br>
+                    As for the p5.js practise, this week we learnt more about implementing sound and music, in which it would be used to create visual effects for our text and/or images. In particular we used the p5.Amplitude function along with the volume and mappedVol in order to create a visual effect reacting to the sound file given.
+                </div>
+            </div>
+            
+            <div id="comments">
+                <h2>Comments & Responses</h2>
+                <div id="comment-form">
+                    <textarea placeholder="Write a comment..."></textarea>
+                    <button>Post Comment</button>
+                </div>
+                
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="../IMG/pp1.png" alt="User Avatar">
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <a href="#" class="username">Palwin</a>
+                            <span class="comment-date">2 days ago</span>
+                        </div>
+                        <div class="comment-text">
+                            Did you make your own version of the p5.js in class but then forgot to save it and ended up looking through the Github for the workshop activity code??? LOL
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="../IMG/pp2.png" alt="User Avatar">
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <a href="#" class="username">Cl1ck420</a>
+                            <span class="comment-date">1 day ago</span>
+                        </div>
+                        <div class="comment-text">
+                            Hey guys! I just found a new way to make 1 morbillion dollars! All you have to do is click on my link and then put in your credit card to get 1 morbillion dollars immediately! go to www.givemeyourmoney.com right now!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="side-col">
+            <div id="related-header">
+                <h3>Related Videos</h3>
+            </div>
+            
+            <div class="related-video">
+                <div class="thumb-container">
+                    <img src="../IMG/uthumbnail1.png" alt="Hunt and Gather with me">
+                    <span class="duration">2:14</span>
+                </div>
+                <div class="related-info">
+                    <a href="huntngather/index.html" class="related-title">Hunt and Gather with me! INSANE FINDS!!!</a>
+                    <span class="related-views">14,532 views</span>
+                    <span class="related-from">by Yuukiyamaru</span>
+                </div>
+            </div>
+
+            <div class="related-video">
+                <div class="thumb-container">
+                    <img src="../IMG/uthumbnail2.png" alt="Data Visualisation">
+                    <span class="duration">5:22</span>
+                </div>
+                <div class="related-info">
+                    <a href="datavisual/index.html" class="related-title">Data Visualisation: 1 umbralis per view!</a>
+                    <span class="related-views">69 views</span>
+                    <span class="related-from">by xxAwesomeUmbralisxx</span>
+                </div>
+            </div>
+
+            <div class="related-video">
+                <div class="thumb-container">
+                    <img src="../IMG/uthumbnail3.png" alt="Cat Play">
+                    <span class="duration">3:45</span>
+                </div>
+                <div class="related-info">
+                    <a href="workshop/index.html" class="related-title">How likely would my cat play with the things in my bag? GONE WRONG!</a>
+                    <span class="related-views">310 views</span>
+                    <span class="related-from">by JurgenWinata</span>
+                </div>
+            </div>
+            
+            <div id="ad-box">
+                <div id="ad-header">Sponsored</div>
+                <div id="ad-content">
+                    <a href="https://wammiwi.itch.io/a-world-without-humans" target="_blank" rel="noopener noreferrer">
+                        <img src="../IMG/sponsor.png" alt="A World Without Humans - Play Now" title="A World Without Humans">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a href="../index.html" class="home-nav">
+        <img src="../IMG/6home.png" alt="Return to Homepage">
+    </a>
+</body>
+</html>

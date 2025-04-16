@@ -1,0 +1,424 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+a {
+    color: #03c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#header {
+    background-color: #fff;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#logo {
+    height: auto;
+    max-height: 40px;
+    vertical-align: middle;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#tagline {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.tm {
+    font-size: 8px;
+    vertical-align: super;
+}
+
+#header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#search-box {
+    width: 200px;
+    height: 22px;
+    border: 1px solid #ccc;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+#search-button {
+    height: 24px;
+    background: linear-gradient(to bottom, #f8f8f8, #e1e1e1);
+    border: 1px solid #ccc;
+    border-left: none;
+    padding: 0 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#user-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#user-links a {
+    margin-left: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#upload {
+    color: #333;
+}
+
+.sign-in {
+    color: #c00 !important;
+}
+
+#content {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+#main-col {
+    flex: 3;
+    margin-right: 20px;
+    max-width: none;
+}
+
+#video-player {
+    background-color: #000;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+#player-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+#featured-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#video-info {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#video-info h1 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+    font-weight: normal;
+}
+
+#rating {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#stars {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    color: #ccc;
+    font-size: 16px;
+}
+
+.star.filled {
+    color: #c00;
+}
+
+#stars span:last-child {
+    margin-left: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+#views {
+    font-size: 12px;
+    color: #666;
+}
+
+#video-actions {
+    margin-bottom: 10px;
+}
+
+.action-btn {
+    background: linear-gradient(to bottom, #f8f8f8, #e1e1e1);
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 3px 8px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#uploader {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+#description {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#comments {
+    margin-top: 20px;
+}
+
+#comments h2 {
+    font-size: 14px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+#comment-form {
+    margin-bottom: 15px;
+}
+
+#comment-form textarea {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 12px;
+    resize: none;
+    margin-bottom: 5px;
+}
+
+#comment-form button {
+    background: linear-gradient(to bottom, #f8f8f8, #e1e1e1);
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 3px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    float: right;
+}
+
+.comment-avatar {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.comment-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.comment {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-header {
+    margin-bottom: 5px;
+}
+
+.username {
+    font-weight: bold;
+    color: #03c;
+}
+
+.comment-date {
+    color: #999;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.comment-text {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+#side-col {
+    flex: 1;
+    width: auto;
+    max-width: none;
+}
+
+#related-header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#related-header h3 {
+    font-size: 14px;
+    margin: 0 0 5px;
+    color: #333;
+}
+
+.related-video {
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.thumb-container {
+    width: 120px;
+    height: 70px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.thumb-container img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    object-fit: cover;
+}
+
+.duration {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 10px;
+    padding: 1px 3px;
+}
+
+.related-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-title {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 2px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.related-views, .related-from {
+    font-size: 11px;
+    color: #666;
+}
+
+#ad-box {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+#ad-header {
+    background-color: #f5f5f5;
+    padding: 3px 6px;
+    color: #666;
+    font-size: 11px;
+    border-bottom: 1px solid #ccc;
+}
+
+#ad-content a {
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+#ad-content a:hover {
+    opacity: 0.9;
+}
+
+#ad-content img {
+    width: 100%;
+    display: block;
+    border: none;
+}
+
+.home-nav {
+    position: fixed;
+    bottom: 0px;
+    right: 70px;
+    z-index: 1000;
+    width: 250px;
+    height: 250px;
+    transition: transform 0.2s ease;
+}
+
+.home-nav img {
+    width: 100%;
+    height: 100%;
+}
+
+.home-nav:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    #content {
+        flex-direction: column;
+    }
+    
+    #main-col {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    #side-col {
+        width: 100%;
+    }
+}
