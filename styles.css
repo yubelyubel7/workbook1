@@ -97,17 +97,17 @@ nav a:hover {
 }
 
 .folder-content {
-    position: fixed; /* Change from absolute or default to fixed */
-    top: 50%;       /* Center vertically */
-    left: 50%;      /* Center horizontally */
-    transform: translate(-50%, -50%); /* Perfect centering */
+    position: fixed; 
+    top: 50%;       
+    left: 50%;      
+    transform: translate(-50%, -50%); 
     background: #fff;
     border: 1px solid #0a246a;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     display: none;
     flex-direction: column;
-    min-width: 300px; /* Slightly wider for better Windows XP look */
+    min-width: 300px; 
     z-index: 999;
     padding: 0;
 }
@@ -163,7 +163,7 @@ nav a:hover {
 
 .folder-body {
     padding: 10px;
-    color: #000; /* ensure body text is black */
+    color: #000; 
 }
 
 .folder-body a {
