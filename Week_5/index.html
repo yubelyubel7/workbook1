@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-image">
+        <img src="../IMG/foundu.png" alt="Found U">
+    </div>
+
+    <div class="p5webcam-container">
+        <div class="p5webcam-titlebar">
+            <span class="title">p5webcam.exe</span>
+            <div class="window-controls">
+                <button class="minimize">_</button>
+                <button class="maximize">□</button>
+                <button class="close">×</button>
+            </div>
+        </div>
+        <iframe src="https://yubelyubel7.github.io/p5webcam/" 
+                class="p5webcam-frame" 
+                allow="camera; display-capture;" 
+                allowfullscreen
+                scrolling="no"
+                frameborder="0"></iframe>
+    </div>
+
+    <div class="paint-window">
+        <div class="title-bar">
+            <span class="title">
+                <img src="../IMG/paint.png" alt="Paint" class="paint-icon">
+                untitled - Paint
+            </span>
+            <div class="window-controls">
+                <button class="minimize">_</button>
+                <button class="maximize">□</button>
+                <button class="close">×</button>
+            </div>
+        </div>
+        
+        <div class="menu-bar">
+            <div class="menu-item">File</div>
+            <div class="menu-item">Edit</div>
+            <div class="menu-item">View</div>
+            <div class="menu-item">Image</div>
+            <div class="menu-item">Help</div>
+        </div>
+        
+        <div class="toolbar">
+            <div class="tool active" data-tool="pencil">
+                <img src="../IMG/pencilpaint.png" alt="Pencil">
+            </div>
+            <div class="tool" data-tool="brush">
+                <img src="../IMG/brushpaint.png" alt="Brush">
+            </div>
+            <div class="tool" data-tool="eraser">
+                <img src="../IMG/eraserpaint.png" alt="Eraser">
+            </div>
+        </div>
+        
+        <div class="color-palette">
+            <div class="color-swatch active" data-color="#000000" style="background-color: #000000;"></div>
+            <div class="color-swatch" data-color="#FFFFFF" style="background-color: #FFFFFF;"></div>
+            <div class="color-swatch" data-color="#FF0000" style="background-color: #FF0000;"></div>
+            <div class="color-swatch" data-color="#00FF00" style="background-color: #00FF00;"></div>
+            <div class="color-swatch" data-color="#0000FF" style="background-color: #0000FF;"></div>
+            <div class="color-swatch" data-color="#FFFF00" style="background-color: #FFFF00;"></div>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="paint-canvas"></canvas>
+        </div>
+        
+        <div class="status-bar">
+            <div class="coordinates">0,0 px</div>
+        </div>
+    </div>
+    
+    <div class="p5texttopoints-container">
+        <div class="p5texttopoints-titlebar">
+            <span class="title">What the sigma.exe</span>
+            <div class="window-controls">
+                <button class="minimize">_</button>
+                <button class="maximize">□</button>
+                <button class="close">×</button>
+            </div>
+        </div>
+        <iframe src="https://yubelyubel7.github.io/textp5/" 
+                class="p5texttopoints-frame" 
+                allowfullscreen
+                scrolling="auto"
+                frameborder="0"></iframe>
+    </div>
+
+    <div class="popup-container">
+        <div class="popup-titlebar">
+            <span class="title">SECRET COLOURING</span>
+            <div class="window-controls">
+                <button class="minimize">_</button>
+                <button class="maximize">□</button>
+                <button class="close">×</button>
+            </div>
+        </div>
+        <div class="popup-content">
+            <a href="umbraliscolour/index.html" class="popup-link">
+                <img src="../IMG/popup1.png" alt="Umbralis Colour" class="popup-image">
+            </a>
+        </div>
+    </div>
+
+    <div class="popup2-container">
+        <div class="popup-titlebar">
+            <span class="title">Pointilize</span>
+            <div class="window-controls">
+                <button class="minimize">_</button>
+                <button class="maximize">□</button>
+                <button class="close">×</button>
+            </div>
+        </div>
+        <div class="popup-content">
+            <a href="umbralispoint/index.html" class="popup-link">
+                <img src="../IMG/popup2.png" alt="Umbralis Point" class="popup-image">
+            </a>
+        </div>
+    </div>
+
+    <div class="popup3-container">
+        <div class="popup-titlebar">
+            <span class="title">Slave2Algo</span>
+            <div class="window-controls">
+                <button class="minimize">_</button>
+                <button class="maximize">□</button>
+                <button class="close">×</button>
+            </div>
+        </div>
+        <div class="popup-content">
+            <a href="slavealgo/index.html" class="popup-link">
+                <img src="../IMG/popup3.png" alt="Slave Algorithm" class="popup-image">
+            </a>
+        </div>
+    </div>
+
+    <a href="../index.html">
+        <img src="../IMG/home.png" alt="Return to Homepage" class="home-nav">
+    </a>
+    
+    <script src="sketch.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

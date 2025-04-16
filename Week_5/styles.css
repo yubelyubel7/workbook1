@@ -1,0 +1,335 @@
+body {
+    background-color: #326ba8;
+    font-family: 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    cursor: url('../IMG/cursor.png'), auto;
+}
+
+.background-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    width: 10%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.background-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.paint-window,
+.p5webcam-container,
+.p5texttopoints-container,
+.popup-container,
+.popup2-container,
+.popup3-container {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #0a246a;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.paint-window {
+    width: 800px;
+    height: 600px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.p5webcam-container {
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    height: 280px;
+    z-index: 11;
+}
+
+.p5texttopoints-container {
+    bottom: 20px;
+    right: 20px;
+    width: 700px;
+    height: 190px;
+    z-index: 9;
+}
+
+.popup-container {
+    bottom: 350px;
+    left: 40px;
+    width: 320px;
+    height: 228px;
+    z-index: 8;
+    overflow: visible;
+}
+
+.popup2-container {
+    bottom: 90px;
+    left: 180px;
+    width: 210px;
+    height: 250px;
+    z-index: 8;
+    overflow: visible;
+}
+
+.popup3-container {
+    bottom: 250px;
+    right: 30px;
+    width: 240px;
+    height: 166px;
+    z-index: 8;
+    overflow: visible;
+}
+
+.title-bar,
+.p5webcam-titlebar,
+.p5texttopoints-titlebar,
+.popup-titlebar {
+    background: linear-gradient(to right, #0a246a, #3a6ea5);
+    color: white;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    cursor: move;
+    user-select: none;
+}
+
+.title-bar .title,
+.p5webcam-titlebar .title,
+.p5texttopoints-titlebar .title,
+.popup-titlebar .title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.window-controls button {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #fff;
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minimize, .maximize {
+    background: linear-gradient(to bottom, #f0f0f0, #dadada);
+}
+
+.close { 
+    background: linear-gradient(to bottom, #e81123, #c21122);
+    color: white !important;
+}
+
+.window-controls button.minimize:hover,
+.window-controls button.maximize:hover {
+    background: linear-gradient(to bottom, #e5e5e5, #d5d5d5);
+    cursor: url('../IMG/cursor2.png'), pointer;
+}
+
+.window-controls button.close:hover {
+    background: linear-gradient(to bottom, #e64b3b, #c21122);
+    cursor: url('../IMG/cursor2.png'), pointer;
+}
+
+.menu-bar {
+    display: flex;
+    padding: 2px 0;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ffffff;
+}
+
+.menu-item {
+    padding: 2px 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #0a246a;
+    color: white;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    bottom: 25px;
+    background: linear-gradient(to right, #fefefe, #e3e2e1);
+    border-right: 1px solid #ccc;
+    padding-top: 10px;
+    z-index: 2;
+}
+
+.tool {
+    width: 30px;
+    height: 30px;
+    margin: 5px auto;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.tool img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.tool.active {
+    border-color: #0a246a;
+    background-color: #e3e3e3;
+}
+
+.color-palette {
+    display: flex;
+    padding: 5px;
+    background: linear-gradient(to bottom, #fefefe, #e3e2e1);
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+    margin: 0 0 0 45px;
+}
+
+.color-swatch {
+    width: 15px;
+    height: 15px;
+    margin: 3px;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.color-swatch.active {
+    border: 1px solid #ffffff;
+    outline: 1px solid #0a246a;
+}
+
+.canvas-container {
+    flex: 1;
+    position: relative;
+    background-color: #ffffff;
+    margin: 0 5px 5px 45px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+#paint-canvas {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+.status-bar {
+    display: flex;
+    padding: 3px 5px;
+    font-size: 11px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
+}
+
+.coordinates {
+    border: 1px solid #ccc;
+    padding: 0 5px;
+}
+
+.home-nav {
+    position: fixed;
+    top: 22px;
+    left: 0px;
+    width: 240px;
+    border: none;
+    padding: 0;
+    cursor: url('../IMG/cursor2.png'), pointer;
+    transition: transform 0.2s ease;
+    z-index: 1000;
+}
+
+.home-nav:hover {
+    transform: scale(1.05);
+}
+
+.paint-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.p5webcam-frame,
+.p5texttopoints-frame {
+    flex: 1;
+    border: none;
+    width: 100%;
+    height: calc(100% - 32px);
+    overflow: hidden;
+}
+
+.popup-content {
+    flex: 1;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.popup-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: url('../IMG/cursor2.png'), pointer;
+}
+
+.popup-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border: none;
+}
+
+.dragging,
+.paint-window.dragging,
+.p5webcam-container.dragging,
+.p5texttopoints-container.dragging,
+.popup-container.dragging,
+.popup2-container.dragging,
+.popup3-container.dragging {
+    opacity: 0.92;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.controls button, .window-controls button {
+    cursor: pointer;
+}
