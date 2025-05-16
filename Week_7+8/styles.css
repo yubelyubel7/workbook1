@@ -1,0 +1,534 @@
+body {
+    font-family: "MS Sans Serif", "Segoe UI", Tahoma, sans-serif;
+    background-image: url('../IMG/78bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+    color: #000;
+    font-size: 12px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+
+.window {
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    box-shadow: 1px 1px 0 0 #000;
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;
+    max-height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.title-bar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    padding: 3px 2px 3px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    user-select: none;
+}
+
+.title-bar-text {
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0;
+    margin-right: auto;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.title-bar-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.title-bar-controls button {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #fff;
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 2px;
+}
+
+.title-bar-controls button[aria-label="Minimize"],
+.title-bar-controls button[aria-label="Maximize"] {
+    background: linear-gradient(to bottom, #f0f0f0, #dadada);
+}
+
+.title-bar-controls button[aria-label="Close"] {
+    background: linear-gradient(to bottom, #e81123, #c21122);
+    color: white !important;
+}
+
+.title-bar-controls button[aria-label="Minimize"]:hover,
+.title-bar-controls button[aria-label="Maximize"]:hover {
+    background: linear-gradient(to bottom, #e5e5e5, #d5d5d5);
+}
+
+.title-bar-controls button[aria-label="Close"]:hover {
+    background: linear-gradient(to bottom, #e64b3b, #c21122);
+}
+
+.title-bar-controls button[aria-label="Minimize"]:before {
+    content: '_';
+}
+
+.title-bar-controls button[aria-label="Maximize"]:before {
+    content: '□';
+}
+
+.title-bar-controls button[aria-label="Close"]:before {
+    content: '×';
+}
+
+.title-bar-controls button[aria-label="Maximize"]:before,
+.title-bar-controls button[aria-label="Restore"]:before {
+    content: '□';
+    position: static; 
+    display: inline-block; 
+    line-height: 22px; 
+}
+
+.title-bar-controls button[aria-label="Restore"]:before {
+    content: '⧉';
+}
+
+.title-bar-controls button:hover {
+    background-color: #e5e5e5;
+}
+
+.title-bar-controls button:active {
+    background-color: #d5d5d5;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+}
+
+.window-body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.toolbar {
+    background-color: #c0c0c0;
+    border-bottom: 1px solid #808080;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.toolbar button {
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    padding: 2px 8px;
+    font-size: 11px;
+    margin-right: 4px;
+    height: 22px;
+    position: relative;
+}
+
+.toolbar button:active {
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+}
+
+.separator {
+    width: 1px;
+    height: 20px;
+    background-color: #808080;
+    margin: 0 5px;
+}
+
+.mail-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 150px;
+    min-width: 120px;
+    background-color: #c0c0c0;
+    border-right: 1px solid #808080;
+    overflow-y: auto;
+    flex: 0 0 auto;
+}
+
+.folder {
+    padding: 4px 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.folder:hover {
+    background-color: #d0d0d0;
+}
+
+.folder.active {
+    background-color: #000080;
+    color: white;
+}
+
+.email-list {
+    width: 250px;
+    min-width: 200px;
+    border-right: 1px solid #808080;
+    background-color: #ffffff;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+
+.email-header {
+    display: flex;
+    border-bottom: 1px solid #808080;
+    background-color: #c0c0c0;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.header-from, .email-from {
+    width: 70px;
+    padding: 4px;
+    border-right: 1px solid #808080;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header-subject, .email-subject {
+    flex: 1;
+    padding: 4px;
+    border-right: 1px solid #808080;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header-date, .email-date {
+    width: 60px;
+    padding: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header-profile {
+    width: 24px;
+    padding: 4px;
+    border-right: 1px solid #808080;
+}
+
+.email-profile {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2px;
+    border-right: 1px solid #808080;
+}
+
+.email-profile img {
+    width: 20px;
+    height: 20px;
+}
+
+.email {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    position: relative;
+}
+
+.email:hover {
+    background-color: #e8e8e8;
+}
+
+.email.selected {
+    background-color: #0078d7;
+    color: white;
+}
+
+.email-preview {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.email-preview-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.email-preview-header div {
+    margin: 5px 0;
+}
+
+.email-preview-body {
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+.attachment {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-top: 15px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.attachment-icon {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.attachment-name {
+    font-weight: bold;
+}
+
+.attachment-size {
+    color: #666;
+    font-size: 11px;
+}
+
+.status-bar {
+    border-top: 1px solid #808080;
+    padding: 3px 5px;
+    background-color: #c0c0c0;
+    flex: 0 0 auto;
+}
+
+.status-bar p {
+    margin: 0;
+}
+
+.home-link {
+    position: fixed;
+    top: 22px;
+    left: 0px;
+    z-index: 1000;
+    width: 240px;
+    transition: transform 0.2s ease;
+}
+
+.home-link img {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+
+.home-link:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .window {
+        width: 95%;
+        height: 90vh;
+        margin: 10px auto;
+    }
+    
+    .mail-content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        display: flex;
+        width: 100%;
+        height: auto;
+        overflow-x: auto;
+        border-right: none;
+        border-bottom: 1px solid #808080;
+    }
+    
+    .folder {
+        padding: 8px 12px;
+        white-space: nowrap;
+    }
+    
+    .email-list {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #808080;
+        max-height: 30vh;
+    }
+    
+    .email-preview {
+        max-height: 40vh;
+    }
+}
+
+.dragging {
+    opacity: 0.9;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.attachment-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+}
+
+.attachment:hover {
+    background-color: #e8e8e8;
+}
+
+.attachment-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 28px;
+    background-color: #c0c0c0;
+    border-top: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+    z-index: 9999;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    padding: 0 8px;
+    height: 22px;
+    font-weight: bold;
+    margin-right: 5px;
+    text-decoration: none;
+    color: black;
+    min-width: 50px;
+}
+
+.start-button:hover {
+    background-color: #d0d0d0;
+}
+
+.start-button:active {
+    background-color: #bdbdbd;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+}
+
+.taskbar-divider {
+    width: 1px;
+    height: 22px;
+    background-color: #808080;
+    margin: 0 5px;
+}
+
+.taskbar-items {
+    display: flex;
+    flex: 1;
+    height: 22px;
+}
+
+.taskbar-item {
+    display: flex;
+    align-items: center;
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    padding: 0 8px;
+    margin-right: 3px;
+    min-width: 120px;
+    max-width: 200px;
+    font-size: 11px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.taskbar-item.active {
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    background-color: #d2d2d2;
+}
+
+.taskbar-item img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.taskbar-time {
+    padding: 0 10px;
+    font-size: 11px;
+    border: 1px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    height: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.window.minimized {
+    display: none !important;
+}
+
+.toolbar-button {
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    padding: 3px 10px;
+    margin-right: 2px;
+    font-size: 11px;
+    font-family: "MS Sans Serif", "Segoe UI", Tahoma, sans-serif;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.toolbar-button:hover {
+    background-color: #d0d0d0;
+}
+
+.toolbar-button:active {
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    background-color: #bdbdbd;
+}
